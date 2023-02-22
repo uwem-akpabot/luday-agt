@@ -1,0 +1,24 @@
+{
+  "name": "afj",
+  "version": "1.0.0",
+  "description": "AFJ front-end web application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nkumah7/afj-farms.git"
+  },
+  "author": "JoTeq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nkumah7/afj-farms/issues"
+  },
+  "homepage": "https://github.com/Nkumah7/afj-farms#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

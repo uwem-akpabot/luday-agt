@@ -1,0 +1,584 @@
+{
+    "application_name": "www.ludayab.com",
+    "parts": [
+        {
+            "part_handler": "ReactHandler",
+            "version": "17.0.2",
+            "pages": [
+                {
+                    "page_name": "index",
+                    "layout": "layout_index_2",
+                    "install_path": "src",
+                    "replacements": [
+                        {
+                            "pattern": "@@AppPage@@",
+                            "content": "App"
+                        }
+                    ],
+                    "sections": [
+                        
+                    ],
+                    "packages": [
+                        {
+                            "package_name": "axios@^0.27.2"
+                        }
+                    ]
+                },
+                {
+                    "page_name": "App",
+                    "layout": "layout_app_3",
+                    "install_path": "src",
+                    "page_imports": [
+                        "import './App.css'",
+                        "import AppRouter from './routers/AppRouter'"
+                    ],
+                    "replacements": [
+                       
+                    ],
+                    "sections": [
+                        {
+                            "component_name": "StaticRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_staticRoute_2",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "AppRouter",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_appRouter_2",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": [
+                                {
+                                    "package_name": "history@^4.10.0"
+                                },
+                                {
+                                    "package_name": "react-router-dom@^6.8.1"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "routes",
+                            "template_class": "Constants",
+                            "template_group": "constants",
+                            "template_name": "constants_routes_2",
+                            "install_path": "src/constants",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Constants",
+                            "template_group": "constants",
+                            "template_name": "constants_index",
+                            "install_path": "src/constants",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_8",
+                            "install_path": "src/components/default/Navigation/main",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Navigation"
+                                },
+                                {
+                                    "pattern": "@@Nav1@@",
+                                    "content": "Home"
+                                },
+                                {
+                                    "pattern": "@@Nav2@@",
+                                    "content": "About us"
+                                },
+                                {
+                                    "pattern": "@@Nav3@@",
+                                    "content": "Services"
+                                },
+                                {
+                                    "pattern": "@@Nav4@@",
+                                    "content": "Portfolio"
+                                },
+                                {
+                                    "pattern": "@@Nav5@@",
+                                    "content": "Blogs"
+                                },
+                                {
+                                    "pattern": "@@Nav6@@",
+                                    "content": "Contact us"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "@headlessui/react@^1.7.10"
+                                },
+                                {
+                                    "package_name": "@heroicons/react@^2.0.14"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Footers",
+                            "template_group": "footers",
+                            "template_name": "footer_1",
+                            "install_path": "src/components/default/Footer",
+                            "replacements": [
+                                {
+                                    "pattern": "@@Email@@",
+                                    "content": "sales@luday.se"
+                                },
+                                {
+                                    "pattern": "@@CompanyName@@",
+                                    "content": "Luday"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "DefaultIndex",
+                            "template_group": "default_component_index",
+                            "template_name": "default_component_page_index_1",
+                            "install_path": "src/pages",
+                            "replacements": [
+                                
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "DefaultIndex",
+                            "template_group": "default_component_index",
+                            "template_name": "default_component_index_1",
+                            "install_path": "src/components/default",
+                            "replacements": [
+                                
+                            ],
+                            "packages": []
+                        }
+                    ],
+                    "packages": [
+                        
+                    ]
+                },
+                {
+                    "page_name": "Home",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default",
+                    "page_imports": [ 
+                        "import Slider from '../../components/Hero/Slider'",
+                        "import Intro from '../../components/Intro/Intro'",
+                        "import Services from '../../components/Services/Services'",
+                        "import Counter from '../../components/Counter/Counter'",
+                        "import Deals from '../../components/Deals/Deals'",
+                        "import Client from '../../components/Clients/Client'",
+                        "import Testimonials from '../../components/Testimonials/Testimonials'"
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@Pos1@@",
+                            "content": "< Slider  />"
+                        },
+                        {
+                            "pattern": "@@Pos2@@",
+                            "content": "< Intro  />"
+                        },
+                        {
+                            "pattern": "@@Pos3@@",
+                            "content": "< Services  />"
+                        },
+                        {
+                            "pattern": "@@Pos4@@",
+                            "content": "< Counter  />"
+                        },
+                        {
+                            "pattern": "@@Pos5@@",
+                            "content": "< Client  />"
+                        },
+                        {
+                            "pattern": "@@Pos6@@",
+                            "content": "< Testimonials  />"
+                        },
+                        {
+                            "pattern": "@@Pos8@@",
+                            "content": "< Deals  />"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        {
+                            "component_name": "Slider",
+                            "template_class": "Heros",
+                            "template_group": "heros",
+                            "template_name": "hero_4",
+                            "install_path": "src/components/Hero",
+                            "replacements": [
+                                
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "tw-elements@^1.0.0-alpha13"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "Intro",
+                            "template_class": "Intros",
+                            "template_group": "intros",
+                            "template_name": "intro_2",
+                            "install_path": "src/components/Intro",
+                            "replacements": [
+                                {
+                                    "pattern": "@@Heading1@@",
+                                    "content": "About Us"
+                                },
+                                {
+                                    "pattern": "@@Heading2@@",
+                                    "content": "Who we are"
+                                },
+                                {
+                                    "pattern": "@@Paragraph1@@",
+                                    "content": "We are an innovation-driven ICT company committed to giving the best solution to any business need. Our goal is to develop user-friendly scalable software and mobile applications that meet the needs of our clients and improve business productivity."
+                                },
+                                {
+                                    "pattern": "@@Heading3@@",
+                                    "content": "Our Mission"
+                                },
+                                {
+                                    "pattern": "@@Paragraph2@@",
+                                    "content": "Our mission is to provide quality and cutting edge technological solutions for small to large scale businesses and individuals"
+                                },
+                                {
+                                    "pattern": "@@Heading4@@",
+                                    "content": "Our Vision"
+                                },
+                                {
+                                    "pattern": "@@Paragraph3@@",
+                                    "content": "Our vision is to be an enabler in the success story of our customers and partners."
+                                },
+                                {
+                                    "pattern": "@@Heading5@@",
+                                    "content": "Do you need a digital product?"
+                                },
+                                {
+                                    "pattern": "@@Paragraph4@@",
+                                    "content": "We can complete the development of your digital product using the agile software development. We are also experts at scaling already-existing apps, assisting clients in making the transition from unreliable solutions to products that genuinely expand along with their user bases."
+                                },
+                                {
+                                    "pattern": "@@Heading6@@",
+                                    "content": "Need a cross-functional development team?"
+                                },
+                                {
+                                    "pattern": "@@Paragraph5@@",
+                                    "content": "Our cross-functional, agile teams of software engineers and designers are committed to achieving your business objectives. The development team will offer guidance along the way, helping you decide on a course of action, adapt to shifting conditions, and transfer their knowledge so you can advance on your own."
+                                },
+                                {
+                                    "pattern": "@@CallToAction1@@",
+                                    "content": "Read More"
+                                },
+                                {
+                                    "pattern": "@@CallToAction2@@",
+                                    "content": "Get a Quote"
+                                },
+                                {
+                                    "pattern": "@@CallToAction3@@",
+                                    "content": "Contact Us"
+                                }
+                            ],
+                            "packages": [
+                               
+                            ]
+                        },
+                        {
+                            "component_name": "ServicesCard",
+                            "template_class": "Services",
+                            "template_group": "services",
+                            "template_name": "company_services_card",
+                            "install_path": "src/components/Services",
+                            "replacements": [
+                                
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Services",
+                            "template_class": "Services",
+                            "template_group": "services",
+                            "template_name": "company_services",
+                            "install_path": "src/components/Services",
+                            "replacements": [
+                                {
+                                    "pattern": "@@Heading1@@",
+                                    "content": "Our Solutions"
+                                },
+                                {
+                                    "pattern": "@@Paragraph1@@",
+                                    "content": "What we Offer"
+                                },
+                                {
+                                    "pattern": "@@Paragraph2@@",
+                                    "content": "We take responsibility for building customized software solutions to help transform your business activities and increase productivity."
+                                }
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Portfolio",
+                            "template_class": "Portfolio",
+                            "template_group": "portfolio",
+                            "template_name": "portfolio_1",
+                            "install_path": "src/components/Portfolio",
+                            "under_development": "yes",
+                            "replacements": [
+                                
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Counter",
+                            "template_class": "Counter",
+                            "template_group": "counter",
+                            "template_name": "counter_1",
+                            "install_path": "src/components/Counter",
+                            "replacements": [
+                                
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Client",
+                            "template_class": "Clients",
+                            "template_group": "clients",
+                            "template_name": "client_2",
+                            "install_path": "src/components/Clients",
+                            "replacements": [
+                                {
+                                    "pattern": "@@TitleText@@",
+                                    "content": "Our clients"
+                                }
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Testimonials",
+                            "template_class": "Testimonials",
+                            "template_group": "testimonials",
+                            "template_name": "testimonial_1",
+                            "install_path": "src/components/Testimonials",
+                            "replacements": [
+                                
+                            ],
+                            "packages": [
+                                
+                            ]
+                        },
+                        {
+                            "component_name": "Deals",
+                            "template_class": "FindDeals",
+                            "template_group": "find_deal",
+                            "template_name": "deal_1",
+                            "install_path": "src/components/Deals",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Deals"
+                                }
+                            ],
+                            "packages": [
+                                
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "page_name": "About",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default",
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "About"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "Contact",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default",
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Contact"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "Services",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/services",
+                    "page_imports": [ 
+                       
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Services"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        
+                    ]
+                },
+                {
+                    "page_name": "ServiceDetails",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/services",
+                    "page_imports": [ 
+                        
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "ServiceDetails"
+                        }
+                    ],
+                    "packages": [
+                       
+                    ],
+                    "sections": []
+                },
+                {
+                    "page_name": "Blogs",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/blogs",
+                    "page_imports": [ 
+                        
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Blogs"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "BlogDetails",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/blogs",
+                    "page_imports": [ 
+                        
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "BlogDetails"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        
+                    ]
+                },
+                {
+                    "page_name": "Portfolio",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/portfolio",
+                    "page_imports": [ 
+                        
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Portfolio"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "Quote",
+                    "layout": "layout_2",
+                    "install_path": "src/pages/default/quote",
+                    "page_imports": [ 
+                        
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Quote"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                }
+                
+            ]
+        },
+        {
+            "part_handler": "TailwindCssHandler",
+            "install_path": "src",
+            "content": "src",
+            "plugins": [
+                "require('tw-elements/dist/plugin')"
+            ]
+        },
+        {
+            "part_handler": "ResourceHandler",
+            "resources": [
+                {
+                    "source": "html/ludayab",
+                    "destination": "public"
+                },
+                {
+                    "source": "css/ludayab",
+                    "destination": "src"
+                },
+                {
+                    "source": "utils/ludayab",
+                    "destination": "./"
+                },
+                {
+                    "source": "images/ludayab/favicon",
+                    "destination": "public"
+                },
+                {
+                    "source": "images/ludayab/logo",
+                    "destination": "src/images"
+                },
+                {
+                    "source": "js/helpers/bestdealnaija",
+                    "destination": "src/helpers"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+
+Hi {{first_name}},
+
+Your order was not successful
+
+This might be because you payment was not successful.
+
+You can re initiate this order
+
+Take care,
+
+  Sincerely,
+
+  BestDealNaija Team
+
+  Note: replies to this email address are not monitored.

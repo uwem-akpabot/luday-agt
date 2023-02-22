@@ -1,0 +1,38 @@
+# docker-compose.yml
+version: '3.8'
+
+volumes:
+  bdn_blogs_db_vol:
+
+networks:
+  bdn_network:
+    external:
+      name: bdn_network
+  
+services:
+  bdn-blogs-service:
+    container_name: bdn-blogs-service
+    build:
+      context: .
+    ports:
+    - "5004:5004"
+    depends_on:
+      - blogs-db
+    networks:
+      - bdn_network
+    restart: always
+
+  blogs-db:
+    container_name: bdn_blogs_database
+    image: mysql:8
+    ports:
+    - "32004:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_blogs
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_blogs_db_vol:/var/lib/mysql

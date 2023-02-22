@@ -1,0 +1,19 @@
+Hi {{first_name}},
+
+Welcome to BestDealNaija – we’re excited to have you on board and we’d love to say thank you on behalf of our whole company for chosing us. We believe our services will help you get more visibility and land more more sales of your product/service.
+
+Your business {{business_name}} is awaiting review. This will take a short while. You will be contacted on the decisions of the company once this process is completed.
+
+To ensure you gain the very best out of our service, we’ve put together some of the most helpful guides:
+
+This video [LINK] walks you through setting up your products/services for the first time. Our blog on http://bestdealvps.luday.se/blog has some great tips and best practices on how you can use and benefit from our services
+
+Have any questions or need more information? Just shoot us an email! We’re always here to help. Feel free to send us an email on info@bestdealnaija.com if you want a fast response.
+
+Take care,
+
+Sincerely,
+
+BestDealNaija Team
+
+Note: replies to this email address are not monitored.

@@ -1,0 +1,181 @@
+<ul class="product-list" id="products-list">
+								<li class="products eggs">								
+									<div class="product ftco-animate">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/mae-mu-ECjY3Ypyl5g-unsplash.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<!-- <span class="seller">Best Seller</span> -->
+											<span class="category">Eggs</span>
+											<h2>White Eggs</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>								
+								<li class="products baked-products">								
+									<div class="product ftco-animate" data-category="baked-products">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/pexels-karolina-grabowska-4197905.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<!-- <span class="seller">Best Seller</span> -->
+											<span class="category">Baked Products</span>
+											<h2>Bread</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>								
+								<li class="products dairy-products">								
+									<div class="product ftco-animate" data-category="dairy-products">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/mehrshad-rajabi-P7MkoYvSnLI-unsplash.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<!-- <span class="new">New Arrival</span> -->
+											<span class="category">Dairy Products</span>
+											<h2>Bottled Milk</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products eggs">								
+									<div class="product ftco-animate" data-category="eggs">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/estudio-gourmet-wiprNAISUaQ-unsplash.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Eggs</span>
+											<h2>Brown Eggs</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products dairy-products">								
+									<div class="product ftco-animate" data-category="dairy-products">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/pexels-tabitha-mort-773253.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Dairy Products</span>
+											<h2>Cheese</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products baked-products">								
+									<div class="product ftco-animate" data-category="baked-products">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/alejandra-cifre-gonzalez-Z9yALdymUUI-unsplash.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Baked Products</span>
+											<h2>Bagels</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products eggs">								
+									<div class="product ftco-animate" data-category="eggs">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/pexels-klaus-nielsen-6294198.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Eggs</span>
+											<h2>Smiley Eggs</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products eggs">								
+									<div class="product ftco-animate" data-category="eggs">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/egg-1554093_1920.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Eggs</span>
+											<h2>Multi-color Eggs</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>
+								<li class="products baked-products">								
+									<div class="product ftco-animate" data-category="baked-products">
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/products/pexels-polina-tankilevitch-8599524.jpg);">
+											<div class="desc">
+												<p class="meta-prod d-flex">
+													<a href="#" class="d-flex align-items-center justify-content-center icon1"><span class="fa fa-shopping-basket"></span></a>
+													<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a> -->
+													<a href="#" class="d-flex align-items-center justify-content-center icon2"><span class="fa fa-eye"></span></a>
+												</p>
+											</div>
+										</div>
+										<div class="text text-center">
+											<span class="category">Baked Products</span>
+											<h2>Bagels</h2>
+											<span class="price">₦999.99</span>
+										</div>
+									</div>								
+								</li>							
+								<div class="row mt-5">
+								<div class="col text-center">
+									<div class="block-27">
+										<ul>
+											<li><a href="#">&lt;</a></li>
+											<li class="active"><span>1</span></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li><a href="#">&gt;</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>-->

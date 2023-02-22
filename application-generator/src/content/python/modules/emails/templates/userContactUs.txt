@@ -1,0 +1,25 @@
+Hi Admin,
+
+You got a contact message from the BestDealNaija. See details below 
+
+Senders name: {{MSender}}
+
+Senders email: {{Memail}}
+
+Senders phone: {{Phone}}
+
+Subject: {{Msubject}}
+
+Message: {{Message}}
+
+
+Kindly respond
+
+
+Take care,
+
+  Sincerely,
+
+  BestDealNaija Team
+
+  Note: replies to this email address are not monitored.

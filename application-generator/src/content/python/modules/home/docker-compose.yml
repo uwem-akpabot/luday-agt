@@ -1,0 +1,23 @@
+# docker-compose.yml
+version: '3.8'
+
+volumes:
+  bdn_home_db_vol:
+
+networks:
+  bdn_network:
+    external:
+      name: bdn_network
+  
+services:
+  bdn-home-service:
+    container_name: bdn-home-service
+    build:
+      context: .
+    ports:
+    - "5000:5000"
+    networks:
+      - bdn_network
+    restart: always
+
+ 

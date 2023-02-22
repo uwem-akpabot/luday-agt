@@ -1,0 +1,15 @@
+  Hi {{first_name}}
+
+  Thank you for signing up on BestDealNaija, your number one (1) stop to finding best deals. You have one last step to discover amazing deals. 
+
+  Start exploring for free! Copy and past this link into your browser:
+  
+  http://bestdealvps.luday.se/products
+
+  We will check in with you again. Until then, enjoy finding the best deals
+
+  Sincerely,
+
+  BestDealNaija Team
+
+  Note: replies to this email address are not monitored.

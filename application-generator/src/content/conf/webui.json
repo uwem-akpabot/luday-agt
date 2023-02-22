@@ -1,0 +1,1008 @@
+{
+    "application_name": "www.webui.com",
+    "parts": [
+        {
+            "part_handler": "ReactHandler",
+            "version": "17.0.2",
+            "pages": [
+                {
+                    "page_name": "index",
+                    "layout": "layout_webui_redux_index_1",
+                    "install_path": "src",
+                    "replacements": [
+                        {
+                            "pattern": "@@AppPage@@",
+                            "content": "App"
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "component_name": "index",
+                            "template_class": "Services",
+                            "template_group": "services",
+                            "template_name": "services_index",
+                            "install_path": "src/services",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Carts",
+                            "template_group": "carts",
+                            "template_name": "cart_summary_index",
+                            "install_path": "src/components/cart",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "request",
+                            "template_class": "Services",
+                            "template_group": "services",
+                            "template_name": "request_service",
+                            "install_path": "src/services",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "user",
+                            "template_class": "Services",
+                            "template_group": "services",
+                            "template_name": "user_service",
+                            "install_path": "src/services",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "reportWebVitals",
+                            "template_class": "ReportWebVitals",
+                            "template_group": "reportWebVitals",
+                            "template_name": "web_vital_1",
+                            "install_path": "src",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "reportWebVitals"
+                                }
+                            ],
+                            "packages": []
+                        }
+                    ],
+                    "packages": [
+                        {
+                            "package_name": "react-router-dom@^6.3.0"
+                        }
+                    ]
+                },
+                {
+                    "page_name": "Home",
+                    "layout": "layout_4",
+                    "install_path": "src/pages/static",
+                    "page_imports": [ 
+                        "import { useDocumentTitle, useScrollTop } from '../../hooks';",
+                        "import Slider from '../../components/default/Slider';",
+                        "import FeaturedProduct from '../../components/productsCard/featuredCard';",
+                        "import RecommendedDeals from '../../pages/deals/FindDeal';"
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@Pos2@@",
+                            "content": "< Slider />"
+                        },
+                        {
+                            "pattern": "@@Pos3@@",
+                            "content": "< FeaturedProduct />"
+                        },
+                        {
+                            "pattern": "@@Pos4@@",
+                            "content": "< RecommendedDeals />"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        {
+                            "component_name": "Slider",
+                            "template_class": "Sliders",
+                            "template_group": "sliders",
+                            "template_name": "slide_1",
+                            "position_on_page": "@@Pos1@@",
+                            "install_path": "src/components/default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@ComponentName@@",
+                                    "content": "Slider"
+                                },
+                                {
+                                    "pattern": "@@cta@@",
+                                    "content": "PLACE YOUR ORDER NOW"
+                                },
+                                {
+                                    "pattern": "@@PreviousSliderText@@",
+                                    "content": "Previous"
+                                },
+                                {
+                                    "pattern": "@@NextSliderText@@",
+                                    "content": "Next"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "FeaturedProducts",
+                            "template_group": "featured_products",
+                            "template_name": "index",
+                            "position_on_page": "@@Pos2@@",
+                            "install_path": "src/components/productsCard/featuredCard",
+                            "replacements": [
+                                {
+                                    "pattern": "@@ComponentName@@",
+                                    "content": "FeaturedProduct"
+                                },
+                                {
+                                    "pattern": "@@Preheadertext@@",
+                                    "content": "B E S T  &nbsp;  D E A L S  &nbsp;  I N  &nbsp;  N I G E R I A"
+                                },
+                                {
+                                    "pattern": "@@HeaderText3@@",
+                                    "content": "Featured Products"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "swiper@^8.3.2"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "FindDeal",
+                            "template_class": "FindDeals",
+                            "template_group": "find_deal",
+                            "template_name": "deal",
+                            "position_on_page": "@@Pos3@@",
+                            "install_path": "src/pages/deals",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "FindDeal"
+                                },
+                                {
+                                    "pattern": "@@Preheadertext@@",
+                                    "content": "B E S T  &nbsp;  D E A L S  &nbsp;  I N  &nbsp;  N I G E R I A"
+                                },
+                                {
+                                    "pattern": "@@HeaderText@@",
+                                    "content": "Recommended Deals!"
+                                }
+                            ],
+                            "packages": []
+                        }
+                    ]
+                },
+                {
+                    "page_name": "FindDeal",
+                    "layout": "layout_5",
+                    "install_path": "src/pages/deals",
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "FindDeal"
+                        },
+                        {
+                            "pattern": "@@Pos2@@",
+                            "content": "< Intro5  />"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "About",
+                    "layout": "layout_about_1",
+                    "install_path": "src/pages/static",
+                    "page_imports": [ 
+                        "import { useDocumentTitle, useScrollTop } from '../../hooks';",
+                        "import Banner from '../../components/default/Banner/index';",
+                        "import bannerImage from '../../images/bdn_about_image_2.jpg'"
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "About"
+                        },
+                        {
+                            "pattern": "@@SubTitle@@",
+                            "content": "About BestDealNaija"
+                        },
+                        {
+                            "pattern": "@@Title@@",
+                            "content": "B E S T &nbsp;  D E A L S &nbsp; I N &nbsp; N I G E R I A "
+                        },
+                        {
+                            "pattern": "@@DocumentTitle@@",
+                            "content": "About BestDealNaija | BestDealNaija"
+                        },
+                        {
+                            "pattern": "@@Paragraph1@@",
+                            "content": "provides advertisement and listings for local businesses organized by category and deals they offer. It currently offers a broad range of marketing tools including online presence, local search, display ads and direct marketing."
+                        },
+                        {
+                            "pattern": "@@Pos1@@",
+                            "content": "<Banner backgroundImage={bannerImage} titleText={title} subtitleText={subtitle}/>"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        {
+                            "component_name": "index",
+                            "template_class": "Banners",
+                            "template_group": "banner",
+                            "template_name": "default",
+                            "install_path": "src/components/default/Banner",
+                            "replacements": [
+                                {
+                                    "pattern": "@@DefaultPropstitleText@@",
+                                    "content": "B E S T  &nbsp;  D E A L S  &nbsp;  I N  &nbsp;  N I G E R I A"
+                                }
+                            ],
+                            "packages": []
+                        }
+                    ]
+                },
+                {
+                    "page_name": "Blog",
+                    "layout": "layout_blog_1",
+                    "install_path": "src/pages/static",
+                    "page_imports": [ 
+                        "import { Link } from 'react-router-dom';",
+                        "import * as ROUTE from '../../constants/routes';",
+                        "import * as CONSTANT from '../../constants/constants';",
+                        "import { FaBlog } from 'react-icons/fa';",
+                        "import { useDocumentTitle, useScrollTop } from '../../hooks';"
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Blog"
+                        },
+                        {
+                            "pattern": "@@DocumentTitle@@",
+                            "content": "Blog | BestDealNaija"
+                        },
+                        {
+                            "pattern": "@@EmptyBlogMssg@@",
+                            "content": "No blogs added yet"
+                        },
+                        {
+                            "pattern": "@@HomeLinkText@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@PageTitle@@",
+                            "content": "Blogs"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "AddProduct",
+                    "layout": "layout_vendor_add_product_1",
+                    "install_path": "src/pages/vendor/products",
+                    "page_imports": [ 
+                        "import { Link } from 'react-router-dom';",
+                        "import { FaAngleLeft, FaPlus } from 'react-icons/fa';",
+                        "import * as ROUTE from '../../../constants/routes';",
+                        "import { useForm } from 'react-hook-form';",
+                        "import swal from 'sweetalert';",
+                        "import axios from 'axios';",
+                        "import { useSelector } from 'react-redux';"
+                    ],
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "VendorAddProduct"
+                        },
+                        {
+                            "pattern": "@@NavLink1@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@NavLink2@@",
+                            "content": "Products"
+                        },
+                        {
+                            "pattern": "@@AddProductText@@",
+                            "content": "Add Products"
+                        },
+                        {
+                            "pattern": "@@NavToProductsText@@",
+                            "content": "Back to products"
+                        },
+                        {
+                            "pattern": "@@Input1Label@@",
+                            "content": "Product Name"
+                        },
+                        {
+                            "pattern": "@@Input1Placeholder@@",
+                            "content": "Enter product Name"
+                        },
+                        {
+                            "pattern": "@@Input1ErrorMssg@@",
+                            "content": "Product name is required"
+                        },
+                        {
+                            "pattern": "@@Input1ErrorMssgAlt1@@",
+                            "content": "Max characters should be 25"
+                        },
+                        {
+                            "pattern": "@@Input2Label@@",
+                            "content": "Category"
+                        },
+                        {
+                            "pattern": "@@Input2ErrorMssg@@",
+                            "content": "Select at least one category"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "App",
+                    "layout": "layout_webui_redux_app_1",
+                    "install_path": "src",
+                    "page_imports": [ 
+                        "import React from 'react'", 
+                        "import './App.css'"
+                    ],
+                    "replacements": [],
+                    "packages": [
+                    ],
+                    "sections": [
+                        {
+                            "component_name": "constants",
+                            "template_class": "Constants",
+                            "template_group": "constants",
+                            "template_name": "constants_main",
+                            "install_path": "src/constants",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Constants",
+                            "template_group": "constants",
+                            "template_name": "constants_index",
+                            "install_path": "src/constants",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "routes",
+                            "template_class": "Constants",
+                            "template_group": "constants",
+                            "template_name": "constants_routes",
+                            "install_path": "src/constants",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "AdminRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_adminRoute",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "AppRouter",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_appRouter",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": [
+                                {
+                                    "package_name": "history@^4.10.0"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "ClientRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_clientRoute",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "PublicRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_publicRoute",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "StaticRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_staticRoute",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "VendorRoute",
+                            "template_class": "Routers",
+                            "template_group": "routers",
+                            "template_name": "routers_vendorRoute",
+                            "install_path": "src/routers",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Admin",
+                            "template_group": "admin",
+                            "template_name": "admin_index",
+                            "install_path": "src/components/admin",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Sidebar",
+                            "template_class": "Admin",
+                            "template_group": "admin",
+                            "template_name": "admin_sidebar_1",
+                            "install_path": "src/components/admin",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Sidebar"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "react-icons@^4.4.0"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "Header",
+                            "template_class": "Admin",
+                            "template_group": "admin",
+                            "template_name": "admin_header_1",
+                            "install_path": "src/components/admin",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Header"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "jquery@^3.6.1"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_6",
+                            "install_path": "src/components/default/Navigation/main",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Navigation"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "react-icons@^4.4.0"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "Badge",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_cart_badge_1",
+                            "install_path": "src/components/default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Badge"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "ErrorBoundary",
+                            "template_class": "ErrorBoundaries",
+                            "template_group": "errorBoundaries",
+                            "template_name": "error_boundary_1",
+                            "install_path": "src/components/default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "ErrorBoundary"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Footers",
+                            "template_group": "footers",
+                            "template_name": "footer_5",
+                            "install_path": "src/components/default/Footer",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Footer"
+                                },
+                                {
+                                    "pattern": "@@CompanyName@@",
+                                    "content": "Best Deal Naija"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Header",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_7",
+                            "install_path": "src/components/default/Vendor",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Header"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "react-icons@^4.4.0"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_index_1",
+                            "install_path": "src/components/default/Vendor",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Sidebar",
+                            "template_class": "Sidebars",
+                            "template_group": "sidebars",
+                            "template_name": "sidebar_1",
+                            "install_path": "src/components/default/Vendor",
+                            "replacements": [
+                                {
+                                    "pattern": "@@PageName@@",
+                                    "content": "Sidebar"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "react-icons@^4.4.0"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "index",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_index",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useSetAuthPersistence",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_set_auth_persistence",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useScrollTop",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_scroll_to_top",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useDocumentTitle",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_document_title",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useFileHandler",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_file_handler",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useSetAuthPersistence",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_set_auth_persistence",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useProducts",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_products",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useOrder",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_order",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useOrders",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_orders",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useOrderById",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_order_by_id",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useOrderByRef",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_order_by_ref",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useDidMount",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_did_mount",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "usePaystack",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_paystack",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "useGuestOrders",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_guest_orders",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Popup1",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_pop_up",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "ScrollToTop1",
+                            "template_class": "Hooks",
+                            "template_group": "hooks",
+                            "template_name": "hooks_use_scroll_to_top_1",
+                            "install_path": "src/hooks",
+                            "replacements": [],
+                            "packages": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "part_handler": "TailwindCssHandler",
+            "install_path": "src",
+            "plugins": []
+        },
+        {
+            "part_handler": "PythonHandler",
+            "modules": [
+                {
+                    "module_name": "user",
+                    "pages": [
+                        {
+                            "page_name": "env",
+                            "file_class": "UserEnv",
+                            "file_group": "env",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@AppName@@",
+                                    "content": "AGT Web UI"
+                                },
+                                {
+                                    "pattern": "@@Config@@",
+                                    "content": "config.ProductionConfig"
+                                },
+                                {
+                                    "pattern": "@@db_user@@",
+                                    "content": "root"
+                                },
+                                {
+                                    "pattern": "@@db_password@@",
+                                    "content": ""
+                                },
+                                {
+                                    "pattern": "@@db_name@@",
+                                    "content": "webui_user"
+                                },
+                                {
+                                    "pattern": "@@secret_key@@",
+                                    "content": "2xMnqTxbfgppAWaOOBDbSA"
+                                },
+                                {
+                                    "pattern": "@@admin_email@@",
+                                    "content": "admin@webui.com"
+                                },
+                                {
+                                    "pattern": "@@super_admin_email@@",
+                                    "content": "super@webui.com"
+                                }
+                                ,
+                                {
+                                    "pattern": "@@super_admin_password@@",
+                                    "content": "password"
+                                }
+                            ],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "config",
+                            "file_class": "UserConfig",
+                            "file_group": "config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "i_config",
+                            "file_class": "UserIConfig",
+                            "file_group": "i_config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        }
+                    ]
+                },
+                {
+                    "module_name": "products",
+                    "pages": [
+                        {
+                            "page_name": "env",
+                            "file_class": "ProductsEnv",
+                            "file_group": "env",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@AppName@@",
+                                    "content": "AGT Web UI"
+                                },
+                                {
+                                    "pattern": "@@Config@@",
+                                    "content": "config.ProductionConfig"
+                                },
+                                {
+                                    "pattern": "@@db_user@@",
+                                    "content": "root"
+                                },
+                                {
+                                    "pattern": "@@db_password@@",
+                                    "content": ""
+                                },
+                                {
+                                    "pattern": "@@db_name@@",
+                                    "content": "webui_products"
+                                },
+                                {
+                                    "pattern": "@@secret_key@@",
+                                    "content": "2xMnqTxbfgppAWaOOBDbSA"
+                                },
+                                {
+                                    "pattern": "@@admin_email@@",
+                                    "content": "admin@webui.com"
+                                },
+                                {
+                                    "pattern": "@@super_admin_email@@",
+                                    "content": "super@webui.com"
+                                }
+                                ,
+                                {
+                                    "pattern": "@@super_admin_password@@",
+                                    "content": "password"
+                                }
+                            ],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "config",
+                            "file_class": "ProductsConfig",
+                            "file_group": "config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "i_config",
+                            "file_class": "ProductsIConfig",
+                            "file_group": "i_config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        }
+                    ]
+                },
+                {
+                    "module_name": "home",
+                    "pages": [
+                        {
+                            "page_name": "env",
+                            "file_class": "HomeEnv",
+                            "file_group": "env",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@AppName@@",
+                                    "content": "AGT Web UI"
+                                },
+                                {
+                                    "pattern": "@@Config@@",
+                                    "content": "config.ProductionConfig"
+                                },
+                                {
+                                    "pattern": "@@secret_key@@",
+                                    "content": "2xMnqTxbfgppAWaOOBDbSA"
+                                }
+                            ],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "config",
+                            "file_class": "HomeConfig",
+                            "file_group": "config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "i_config",
+                            "file_class": "HomeIConfig",
+                            "file_group": "i_config",
+                            "file_name": "default",
+                            "replacements": [],
+                            "sections": []
+                        }
+                    ]
+                },
+                {
+                    "module_name": "emails",
+                    "pages": []
+                }
+            ]
+        },
+        {
+            "part_handler": "ResourceHandler",
+            "resources": [
+                {
+                    "source": "html/bestdealnaija/index.html",
+                    "destination": "public"
+                },
+                {
+                    "source": "images/bestdealnaija/images",
+                    "destination": "src/images"
+                },
+                {
+                    "source": "css/bestdealnaija/footer.css",
+                    "destination": "src/components/default/Footer/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/navigation.css",
+                    "destination": "src/components/default/Navigation/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/App.css",
+                    "destination": "src"
+                },
+                {
+                    "source": "js/json/bestdealnaija/",
+                    "destination": "./"
+                },
+                {
+                    "source": "utils/bestdealnaija/.env.example",
+                    "destination": "./"
+                },
+                {
+                    "source": "css/bestdealnaija/Swiper/featuredCard.css",
+                    "destination": "src/components/productsCard/featuredCard"
+                },
+                {
+                    "source": "js/assets/bestdealnaija",
+                    "destination": "src/assets"
+                },
+                {
+                    "source": "js/helpers/bestdealnaija",
+                    "destination": "src/helpers"
+                },
+                {
+                    "source": "css/bestdealnaija/banner.css",
+                    "destination": "src/components/default/Banner/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/CategoryProduct.css",
+                    "destination": "src/pages/product/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/contact.css",
+                    "destination": "src/pages/Contact/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/admin_route.css",
+                    "destination": "src/routers/styles"
+                },
+                {
+                    "source": "css/bestdealnaija/profile.css",
+                    "destination": "src/pages/account/styles"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+Hi {{first_name}},
+
+Great news! Your business {{business_name}} has been approved
+
+Copy and paste this url http://bestdealvps.luday.se/signin into your browser to signin to your dash board and start posting products/services
+
+To ensure you gain the very best out of our service, we’ve put together some of the most helpful guides:
+
+This video [LINK] walks you through setting up your products/services for the first time. Our blog > http://bestdealvps.luday.se/blog has some great tips and best practices on how you can use and benefit from our services
+
+Have any questions or need more information? Just shoot us an email! We’re always here to help. Feel free to send us an email on info@bestdealnaija.com if you want a fast response.
+
+Take care,
+
+Sincerely,
+
+BestDealNaija Team
+
+Note: replies to this email address are not monitored.

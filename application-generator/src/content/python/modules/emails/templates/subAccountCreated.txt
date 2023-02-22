@@ -1,0 +1,22 @@
+Hi {{first_name}},
+
+I have added you as an admin on BestDealNaija
+
+Your login details are:
+
+Username/email: {{user_name}}
+    <br>
+ Password: {{password}}
+
+
+Please login to the admin dashboard or copy and paste the url int your browser to login.
+
+Remember to change your password after logging in for the first time
+
+Best regards,
+
+Sincerely,
+
+BestDealNaija Team
+
+Note: replies to this email address are not monitored.

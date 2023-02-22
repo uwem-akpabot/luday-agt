@@ -1,0 +1,279 @@
+{
+    "application_name": "www.luday.se",
+    "parts": [
+        {
+            "part_handler": "ReactHandler",
+            "version": "17.0.2",
+            "pages": [
+                {
+                    "page_name": "index",
+                    "layout": "layout_index_2",
+                    "replacements": [
+                        {
+                            "pattern": "@@AppPage@@",
+                            "content": "App"
+                        }
+                    ],
+                    "sections": [],
+                    "packages": [
+                        {
+                            "package_name": "react-router-dom"
+                        }
+                    ]
+                },
+                {
+                    "page_name": "Home",
+                    "layout": "layout_1",
+                    "replacements": [
+                        {
+                            "pattern": "@@PageName@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@Pos1@@",
+                            "content": "<Hero3 />"
+                        },
+                        {
+                            "pattern": "@@Pos2@@",
+                            "content": "<Intro1 />"
+                        },
+                        {
+                            "pattern": "@@Pos3@@",
+                            "content": "<Clients1 />"
+                        },
+                        {
+                            "pattern": "@@Pos7@@",
+                            "content": "<Footer1 />"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": [
+                        {
+                            "component_name": "Navbar1",
+                            "template_class": "Navbars",
+                            "template_group": "navbars",
+                            "template_name": "navbar_1",
+                            "replacements": [
+                                {
+                                    "pattern": "@@menu1@@",
+                                    "content": "Home"
+                                },
+                                {
+                                    "pattern": "@@menu2@@",
+                                    "content": "About"
+                                },
+                                {
+                                    "pattern": "@@menu3@@",
+                                    "content": "Services"
+                                },
+                                {
+                                    "pattern": "@@menu4@@",
+                                    "content": "Portfolio"
+                                },
+                                {
+                                    "pattern": "@@menu5@@",
+                                    "content": "Contact Us"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Hero3",
+                            "template_class": "Heros",
+                            "template_group": "heros",
+                            "template_name": "hero_3",
+                            "position_on_page": "@@Pos1@@",
+                            "replacements": [
+                                {
+                                    "pattern": "@@CallToAction@@",
+                                    "content": "Explore Now"
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "react-simple-typewriter",
+                                    "imports": [
+                                        {
+                                            "import_name": "Navbar1",
+                                            "import_src": "./Navbar1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "Intro1",
+                            "template_class": "Intros",
+                            "template_group": "intros",
+                            "template_name": "intro_1",
+                            "position_on_page": "@@Pos2@@",
+                            "replacements": [
+                                {
+                                    "pattern": "@@OurGoal@@",
+                                    "content": "Our goal is to develop user-friendly scalable software and mobile applications that meet the needs of our clients and improve business productivity."
+                                },
+                                {
+                                    "pattern": "@@OurMission@@",
+                                    "content": "Our mission is to provide quality and cutting edge technological solutions for small to large scale businesses and individuals."
+                                },
+                                {
+                                    "pattern": "@@OurVision@@",
+                                    "content": "Our vision is to be an enabler in the success story of our customers and partners."
+                                }
+                            ],
+                            "packages": [
+                                {
+                                    "package_name": "jquery"
+                                },
+                                {
+                                    "package_name": "react-slick"
+                                },
+                                {
+                                    "package_name": "slick-carousel"
+                                }
+                            ]
+                        },
+                        {
+                            "component_name": "Clients1",
+                            "template_class": "Clients",
+                            "template_group": "clients",
+                            "template_name": "client_1",
+                            "position_on_page": "@@Pos3@@",
+                            "replacements": [
+                                {
+                                    "pattern": "@@TitleText@@",
+                                    "content": "Our clients"
+                                }
+                            ],
+                            "packages": []
+                        },
+                        {
+                            "component_name": "Footer1",
+                            "template_class": "Footers",
+                            "template_group": "footers",
+                            "template_name": "footer_1",
+                            "position_on_page": "@@Pos7@@",
+                            "replacements": [
+                                {
+                                    "pattern": "@@Email@@",
+                                    "content": "sales@luday.se"
+                                },
+                                {
+                                    "pattern": "@@CompanyName@@",
+                                    "content": "Luday"
+                                }
+                            ],
+                            "packages": []
+                        }
+                    ]
+                },
+                {
+                    "page_name": "App",
+                    "layout": "layout_app_1",
+                    "replacements": [
+                        {
+                            "pattern": "@@LandingPage@@",
+                            "content": "Home"
+                        },
+                        {
+                            "pattern": "@@Page1@@",
+                            "content": "LudayContact"
+                        },
+                        {
+                            "pattern": "@@Path1@@",
+                            "content": "contact"
+                        }
+                    ],
+                    "packages": [],
+                    "sections": []
+                },
+                {
+                    "page_name": "LudayContact",
+                    "layout": "layout_contact_1",
+                    "replacements": [
+                        {
+                            "pattern": "@@TitleText@@",
+                            "content": "Get in touch"
+                        },
+                        {
+                            "pattern": "@@ReactAppAPI@@",
+                            "content": "http://localhost:5000"
+                        },
+                        {
+                            "pattern": "@@NavBar@@",
+                            "content": "<Navbar1 />"
+                        }
+                    ],
+                    "packages": [
+                        {
+                            "package_name": "axios react-hook-form sweetalert",
+                            "imports": []
+                        }
+                    ],
+                    "sections": []
+                }
+            ]
+        },
+        {
+            "part_handler": "PythonHandler",
+            "modules": [
+                {
+                    "module_name": "contact_us",
+                    "pages": [
+                        {
+                            "page_name": "env",
+                            "file_class": "Env",
+                            "file_group": "env",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@Config@@",
+                                    "content": "config.ProductionConfig"
+                                }
+                            ],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "config",
+                            "file_class": "Config",
+                            "file_group": "config",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@db_user@@",
+                                    "content": "luday_dev"
+                                },
+                                {
+                                    "pattern": "@@db_password@@",
+                                    "content": "password"
+                                },
+                                {
+                                    "pattern": "@@db_name@@",
+                                    "content": "luday_dev_ssg"
+                                }
+                            ],
+                            "sections": []
+                        },
+                        {
+                            "page_name": "i_config",
+                            "file_class": "IConfig",
+                            "file_group": "i_config",
+                            "file_name": "default",
+                            "replacements": [
+                                {
+                                    "pattern": "@@secret_key@@",
+                                    "content": "2xMnqTxbfgppAWaOOBDbSA"
+                                }
+                            ],
+                            "sections": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "part_handler": "TailwindCssHandler",
+            "plugins": []
+        }
+    ]
+}

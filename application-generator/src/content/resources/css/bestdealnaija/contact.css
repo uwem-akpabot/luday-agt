@@ -1,0 +1,5 @@
+.contact_hero {
+	background: linear-gradient(rgba(2,2,2,.4), rgba(0,0,0,.4)),url('../../../images/bdn_contact_image.jpg') center center;
+	background-size: cover;
+	padding: 150px 0 150px;
+}

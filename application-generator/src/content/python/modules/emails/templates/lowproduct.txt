@@ -1,0 +1,15 @@
+Hi {{first_name}},
+
+Grate news! Your business {{venodr_business_name}} on BestDealNaija is get more sales.
+
+Your product quantity is lower than {{remaining_quantity}} login to you account to update product quantity.
+
+Product: {{product_name}}
+
+Take care,
+
+  Sincerely,
+
+  BestDealNaija Team
+
+  <small>Note: replies to this email address are not monitored.</small>

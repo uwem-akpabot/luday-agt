@@ -1,0 +1,162 @@
+# docker-compose.deploy.yml
+version: '3.8'
+
+volumes:
+  bdn_blogs_db_vol:
+  bdn_contact_db_vol:
+  bdn_products_db_vol:
+  bdn_user_db_vol:
+
+networks:
+  bdn_network:
+    external:
+      name: bdn_network
+
+services:
+  bdn-blogs-api:
+    container_name: bdn-blogs-api
+    build:
+      context: api/blogs
+      dockerfile: Dockerfile
+    ports:
+    - "5004:5004"
+    depends_on:
+      - blogs-db
+    networks:
+      - bdn_network
+    restart: always
+  
+  blogs-db:
+    container_name: bdn_blogs_database
+    image: mysql:8
+    ports:
+    - "32004:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_blogs
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_blogs_db_vol:/var/lib/mysql
+
+
+  bdn-contact-api:
+    container_name: bdn-contact-api
+    build:
+      context: api/contact_us
+      dockerfile: Dockerfile
+    ports:
+    - "5001:5001"
+    depends_on:
+      - contact-db
+    networks:
+      - bdn_network
+    restart: always
+
+  contact-db:
+    container_name: bdn_contact_database
+    image: mysql:8
+    ports:
+    - "32001:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_contact
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_contact_db_vol:/var/lib/mysql
+
+
+  bdn-home-api:
+    container_name: bdn-home-api
+    build:
+      context: api/home
+      dockerfile: Dockerfile
+    ports:
+    - "5000:5000"
+    networks:
+      - bdn_network
+    restart: always
+
+
+  bdn-products-api:
+    container_name: bdn-products-api
+    build:
+      context: api/products
+      dockerfile: Dockerfile
+    ports:
+    - "5003:5003"
+    depends_on:
+      - products-db
+    networks:
+      - bdn_network
+    restart: always
+
+  products-db:
+    container_name: bdn_products_database
+    image: mysql:8
+    ports:
+    - "32003:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_products
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_products_db_vol:/var/lib/mysql
+
+
+  bdn-user-api:
+    container_name: bdn-user-api
+    build:
+      context: api/user
+      dockerfile: Dockerfile
+    ports:
+    - "5002:5002"
+    depends_on:
+      - user-db
+    networks:
+      - bdn_network
+    restart: always
+
+  user-db:
+    container_name: bdn_user_database
+    image: mysql:8
+    ports:
+    - "32002:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_user
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_user_db_vol:/var/lib/mysql
+
+  bdn-emails-api:
+    container_name: bdn-emails-api
+    build:
+      context: api/emails
+      dockerfile: Dockerfile
+    ports:
+    - "5005:5005"
+    networks:
+      - bdn_network
+    restart: always
+
+  react-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: npm start
+
+ 

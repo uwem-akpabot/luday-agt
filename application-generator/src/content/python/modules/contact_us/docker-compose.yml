@@ -1,0 +1,38 @@
+# docker-compose.yml
+version: '3.8'
+
+volumes:
+  bdn_contact_db_vol:
+
+networks:
+  bdn_network:
+    external:
+      name: bdn_network
+  
+services:
+  bdn-contact-service:
+    container_name: bdn-contact-service
+    build:
+      context: .
+    ports:
+    - "5001:5001"
+    depends_on:
+      - contact-db
+    networks:
+      - bdn_network
+    restart: always
+
+  contact-db:
+    container_name: bdn_contact_database
+    image: mysql:8
+    ports:
+    - "32001:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password123#
+      MYSQL_DATABASE: bdn_contact
+      MYSQL_USER: bdn_2023
+      MYSQL_PASSWORD: password123#
+    networks:
+      - bdn_network
+    volumes:
+    - bdn_contact_db_vol:/var/lib/mysql

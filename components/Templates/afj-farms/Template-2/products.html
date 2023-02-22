@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFJ Farms</title>
+    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Slick -->
+ 	<link type="text/css" rel="stylesheet" href="assets/css/slick.css"/>
+ 	<link type="text/css" rel="stylesheet" href="assets/css/slick-theme.css"/>
+
+ 	<!-- nouislider -->
+ 	<link type="text/css" rel="stylesheet" href="assets/css/nouislider.min.css"/>
+
+ 	<!-- Font Awesome Icon -->
+ 	<script src="https://use.fontawesome.com/c7e51daf24.js"></script>
+
+
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-body">
+          <div class="cssload-container">
+            <div class="cssload-speeding-wheel"></div>
+          </div>
+          <p>Loading...</p>
+        </div>
+      </div>
+  
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope-fill"></i><a href="mailto:info@afjfarms.com">info@afjfarms.com</a>
+          <i class="bi bi-phone-fill phone-icon"></i> +2348098556584
+        </div>
+        <div class="social-links d-none d-md-block">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+
+        <div class="contact-info">
+          <i class="bi bi-person-circle"></i><a href="#">My Account</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">AFJ Farms</a></h1>
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="about.html">About</a></li>
+            <li><a class="nav-link scrollto active" href="products.html">Products</a></li>
+            <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart mb-2"></i>
+										<span>Cart</span>
+										<div class="qty">3</div>
+									</a>
+									<div class="cart-dropdown">
+                    <div class="d-flex justify-content-end mb-2">
+                      <a class="col-md-4 badge p-n4 bg-danger close-cart" ><i class="fa fa-close"></i>Close</a>
+                    </div>
+                    
+										<div class="cart-list">
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="assets/img/chicken.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Chicken</a></h3>
+													<h4 class="product-price"><span class="qty">1x</span>$90.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="assets/img/egg.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Egg</a></h3>
+													<h4 class="product-price"><span class="qty">3x</span>$90.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+                      <div class="product-widget">
+												<div class="product-img">
+													<img src="assets/img/chicken.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Chicken</a></h3>
+													<h4 class="product-price"><span class="qty">1x</span>$90.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+										</div>
+										<div class="cart-summary">
+											<small>3 Item(s) selected</small>
+											<h5>SUBTOTAL: $2940.00</h5>
+										</div>
+										<div class="cart-btns d-flex justify-content-center">
+											<a href="#" class="mx-1">View Cart</a>
+											<a href="#" class="mx-1">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+							</div>
+						</div>
+            
+          </ul>
+          <i class="bi bi-list-ul mobile-nav-toggle"></i>
+          
+        </nav><!-- .navbar -->
+
+      </div>
+    </header>
+    <!-- End Header -->
+
+      <section id="prod_hero" class="d-flex align-items-center">
+        <div class="container text-center" data-aos="zoom-out" data-aos-delay="500">
+          <h1 class="">Products</h1>
+          <p class="text-white fw-bold lead">Shop high quality poultry products on demand</p>
+        </div>
+      </section>
+
+
+      		<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="breadcrumb-tree">
+							<li><a href="index.html">Home</a></li>
+							<li>Products</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+        
+      <div class="section mb-5">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 class="title">Check out our products</h3>
+                        <div class="section-nav">
+                            <ul class="section-tab-nav tab-nav">
+                                <li class="active"><a data-toggle="tab" href="#tab1">Eggs</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Chickens</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Feeds</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <!-- Products tab & slick -->
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="products-tabs">
+                            <!-- tab -->
+                            <div id="tab1" class="tab-pane active">
+                                <div class="products-slick" data-nav="#slick-nav-1">
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="assets/img/chicks.png" alt="">
+                                            <div class="product-label">
+                                                <span class="sale">-30%</span>
+                                                <span class="new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Eggs</p>
+                                            <h3 class="product-name"><a href="#">Fresh eggs</a></h3>
+                                            <h4 class="product-price">₦ 980.00 <del class="product-old-price">₦ 990.00</del></h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="product-btns">
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">view more</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="assets/img/chicks.png" alt="">
+                                            <div class="product-label">
+                                                <span class="new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Chickens</p>
+                                            <h3 class="product-name"><a href="#">Day old chicks</a></h3>
+                                            <h4 class="product-price">₦ 980.00 <del class="product-old-price">₦ 990.00</del></h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                            <div class="product-btns">
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">view more</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="assets/img/single-prod.png" alt="">
+                                            <div class="product-label">
+                                                <span class="sale">-30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Eggs</p>
+                                            <h3 class="product-name"><a href="#">Fresh Eggs</a></h3>
+                                            <h4 class="product-price">₦ 980.00 <del class="product-old-price">₦ 990.00</del></h4>
+                                            <div class="product-rating">
+                                            </div>
+                                            <div class="product-btns">
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">view more</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="assets/img/egg.png" alt="">
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Eggs</p>
+                                            <h3 class="product-name"><a href="#">Crate of eggs</a></h3>
+                                            <h4 class="product-price">₦ 980.00 <del class="product-old-price">₦ 990.00</del></h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="product-btns">
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">view more</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="assets/img/animal-feed.png" alt="">
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Feeds</p>
+                                            <h3 class="product-name"><a href="#">Organic layers mash</a></h3>
+                                            <h4 class="product-price">₦ 980.00 <del class="product-old-price">₦ 990.00</del></h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="product-btns">
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">view more</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+                                </div>
+                                <div id="slick-nav-1" class="products-slick-nav"></div>
+                            </div>
+                            <!-- /tab -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Products tab & slick -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-6 col-md-12">
+              <div class="footer-info">
+                <h3>AFJ Farms</h3>
+                <p>
+                  A108 Adam Street <br>
+                  Nigeria<br><br>
+                  <strong>Phone:</strong> +2348098556584<br>
+                  <strong>Email:</strong> info@afjfarms.com<br>
+                </p>
+                <div class="social-links mt-3">
+                  <h5>Follow us on social media</h5>
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Account</h4>
+              <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Track orders</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Help center</h4>
+              <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Open dispute</a></li>
+                <li><a href="#">Shipping info</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; 2021. All Rights Reserved AFJ Farms
+        </div>
+        <div class="text-center">
+          Designed by <a href="//luday.se" target="_blank" class="footer-design">Luday</a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product.js"></script>
+
+
+</body>
+</html>

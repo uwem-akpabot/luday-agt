@@ -1,0 +1,122 @@
+pipeline {
+   agent any
+
+	environment {
+		IMAGE_NAME = 'luday/bestdeal-app'
+		IMAGE_TAG = 'latest'
+		APP_NAME = 'bestdeal-app'
+		REACT_APP_CONTACT_API = credentials("REACT_APP_CONTACT_API")
+		REACT_APP_PRODUCTS_API = credentials("REACT_APP_PRODUCTS_API")
+		REACT_APP_BLOGS_API = credentials("REACT_APP_BLOGS_API")
+		REACT_APP_ORDER_API = credentials("REACT_APP_ORDER_API")
+		REACT_APP_USER_API = credentials("REACT_APP_USER_API")
+		REACT_APP_PAYSTACK_SECRET_KEY = credentials("REACT_APP_PAYSTACK_SECRET_KEY")
+		REACT_APP_PAYSTACK_PUBLIC_KEY = credentials("REACT_APP_PAYSTACK_PUBLIC_KEY")
+		REACT_APP_PAYSTACK_CALLBACK_URL = credentials("REACT_APP_PAYSTACK_CALLBACK_URL")
+		SECRET_KEY = credentials("SECRET_KEY")
+		DB_USERNAME = credentials("DB_USERNAME")
+		DB_PASSWORD = credentials("DB_PASSWORD")
+		DB_PORT = credentials("DB_PORT")
+		SUPER_ADMIN_EMAIL = credentials("SUPER_ADMIN_EMAIL")
+		DB_SERVER = credentials("DB_SERVER")
+		DB_DATABASE_BLOGS = credentials("DB_DATABASE_BLOGS")
+		DB_DATABASE_CONTACT = credentials("DB_DATABASE_CONTACT")
+		DB_DATABASE_USER = credentials("DB_DATABASE_USER")
+		DB_DATABASE_PRODUCTS = credentials("DB_DATABASE_PRODUCTS")
+		CONFIGURATION_SETUP = credentials("CONFIGURATION_SETUP")
+		
+	}
+	
+	stages {
+		stage ('Prune Docker data') {
+            steps {
+                sh 'docker system prune -a --volumes -f'
+            }
+        }
+		stage ('Build') {
+		    
+			steps {
+			 
+		
+				sh 'docker network create --driver bridge bdn_network || true'
+				sh 'npm install'
+				
+				
+				sh "echo REACT_APP_CONTACT_API=${REACT_APP_CONTACT_API} >> .env"
+				sh "echo REACT_APP_USER_API=${REACT_APP_USER_API} >> .env"
+				sh "echo REACT_APP_PRODUCTS_API=${REACT_APP_PRODUCTS_API} >> .env"
+				sh "echo REACT_APP_BLOGS_API=${REACT_APP_BLOGS_API} >> .env"
+				sh "echo REACT_APP_ORDER_API=${REACT_APP_ORDER_API} >> .env"
+				sh "echo REACT_APP_PAYSTACK_SECRET_KEY=${REACT_APP_PAYSTACK_SECRET_KEY} >> .env"
+				sh "echo REACT_APP_PAYSTACK_PUBLIC_KEY=${REACT_APP_PAYSTACK_PUBLIC_KEY} >> .env"
+				sh "echo REACT_APP_PAYSTACK_CALLBACK_URL=${REACT_APP_PAYSTACK_CALLBACK_URL	} >> .env"
+				
+			// -------------------- Blogs -----------------------------
+				sh "echo SECRET_KEY=${SECRET_KEY} >> api/blogs/.env"
+				sh "echo DB_USERNAME=${DB_USERNAME} >> api/blogs/.env"
+				sh "echo DB_PASSWORD=${DB_PASSWORD} >> api/blogs/.env"
+				sh "echo DB_PORT=${DB_PORT} >> api/blogs/.env"
+				sh "echo SUPER_ADMIN_EMAIL=${SUPER_ADMIN_EMAIL} >> api/blogs/.env"
+				sh "echo DB_SERVER=${DB_SERVER} >> api/blogs/.env"
+				sh "echo DB_DATABASE=${DB_DATABASE_BLOGS} >> api/blogs/.env"
+				sh "echo CONFIGURATION_SETUP=${CONFIGURATION_SETUP} >> api/blogs/.env"
+				
+			// ------------------------ Contact ---------------------------
+				sh "echo SECRET_KEY=${SECRET_KEY} >> api/contact_us/.env"
+				sh "echo DB_USERNAME=${DB_USERNAME} >> api/contact_us/.env"
+				sh "echo DB_PASSWORD=${DB_PASSWORD} >> api/contact_us/.env"
+				sh "echo DB_PORT=${DB_PORT} >> api/contact_us/.env"
+				sh "echo SUPER_ADMIN_EMAIL=${SUPER_ADMIN_EMAIL} >> api/contact_us/.env"
+				sh "echo DB_SERVER=${DB_SERVER} >> api/contact_us/.env"
+				sh "echo DB_DATABASE=${DB_DATABASE_CONTACT} >> api/contact_us/.env"
+				sh "echo CONFIGURATION_SETUP=${CONFIGURATION_SETUP} >> api/contact_us/.env"
+
+			// ---------------------------- User -------------------------------
+				sh "echo SECRET_KEY=${SECRET_KEY} >> api/user/.env"
+				sh "echo DB_USERNAME=${DB_USERNAME} >> api/user/.env"
+				sh "echo DB_PASSWORD=${DB_PASSWORD} >> api/user/.env"
+				sh "echo DB_PORT=${DB_PORT} >> api/user/.env"
+				sh "echo SUPER_ADMIN_EMAIL=${SUPER_ADMIN_EMAIL} >> api/user/.env"
+				sh "echo DB_SERVER=${DB_SERVER} >> api/user/.env"
+				sh "echo DB_DATABASE=${DB_DATABASE_USER} >> api/user/.env"
+				sh "echo CONFIGURATION_SETUP=${CONFIGURATION_SETUP} >> api/user/.env"
+
+			// -------------------------------- Home ---------------------------
+				sh "echo SECRET_KEY=${SECRET_KEY} >> api/home/.env"
+				sh "echo DB_USERNAME=${DB_USERNAME} >> api/home/.env"
+				sh "echo DB_PASSWORD=${DB_PASSWORD} >> api/home/.env"
+				sh "echo DB_PORT=${DB_PORT} >> api/home/.env"
+				sh "echo SUPER_ADMIN_EMAIL=${SUPER_ADMIN_EMAIL} >> api/home/.env"
+				sh "echo DB_SERVER=${DB_SERVER} >> api/home/.env"
+				sh "echo CONFIGURATION_SETUP=${CONFIGURATION_SETUP} >> api/home/.env"
+				
+			// ------------------------ Products -------------------------
+				sh "echo SECRET_KEY=${SECRET_KEY} >> api/products/.env"
+				sh "echo DB_USERNAME=${DB_USERNAME} >> api/products/.env"
+				sh "echo DB_PASSWORD=${DB_PASSWORD} >> api/products/.env"
+				sh "echo DB_PORT=${DB_PORT} >> api/products/.env"
+				sh "echo SUPER_ADMIN_EMAIL=${SUPER_ADMIN_EMAIL} >> api/products/.env"
+				sh "echo DB_SERVER=${DB_SERVER} >> api/products/.env"
+				sh "echo DB_DATABASE=${DB_DATABASE_PRODUCTS} >> api/products/.env"
+				sh "echo CONFIGURATION_SETUP=${CONFIGURATION_SETUP} >> api/products/.env"
+				sh "docker compose -f docker-compose.deploy.yml build"
+
+			}
+		}
+		stage ('start container') {
+            steps {
+                
+				sh "docker compose -f docker-compose.deploy.yml up -d"
+				sh "chmod a+x deploy.sh"
+				sh "sh deploy.sh"
+                sh 'docker ps'
+            }
+        }
+	}
+	post {
+        always {
+            sh 'docker compose -f docker-compose.deploy.yml down'
+            sh 'docker ps'
+        }
+    }
+}
